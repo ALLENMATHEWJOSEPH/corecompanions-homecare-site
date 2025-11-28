@@ -1054,3 +1054,25 @@ body {
     flex-direction: column;
   }
 }
+/* On smaller screens, show only the icons in the hero feature cards */
+@media (max-width: 600px) {
+  .hero-feature-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .hero-card {
+    padding: 0.6rem;
+    justify-content: center;
+  }
+
+  /* Hide the text (title + description) under each icon */
+  .hero-card-body {
+    display: none;
+  }
+
+  /* Make sure the icon is centered nicely */
+  .hero-card-icon {
+    margin: 0 auto;
+  }
+}
